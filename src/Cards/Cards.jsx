@@ -650,13 +650,13 @@ export default function Cards({ filterCharacter }) {
     },
   ];
 
-  let FilterBusCompanies = filterCharacter
+  const filterBusCompanies = filterCharacter
     ? busCompanies.filter((company) => company.name.startsWith(filterCharacter))
     : busCompanies;
 
   return (
     <div className="companies">
-      {FilterBusCompanies.map((company, index) => (
+      {filterBusCompanies.map((company, index) => (
         <Card key={index} company={company} />
       ))}
     </div>
